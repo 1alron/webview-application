@@ -6,6 +6,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -14,7 +15,8 @@ class MainActivity : AppCompatActivity() {
 
         myWebView.addJavascriptInterface(WebAppInterface(this), "Android")
         myWebView.settings.javaScriptEnabled = true
-        myWebView.webViewClient = WebViewClient()  // default WebViewClient
+
+        myWebView.webViewClient = WebViewClient()     // default WebViewClient
         myWebView.loadUrl("https://mail.google.com/") // Website URL
     }
 }
