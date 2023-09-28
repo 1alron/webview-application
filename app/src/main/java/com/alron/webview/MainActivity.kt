@@ -10,5 +10,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val myWebView: WebView = findViewById(R.id.webview)
+
+        myWebView.addJavascriptInterface(WebAppInterface(this), "Android")
+        myWebView.settings.javaScriptEnabled = true
     }
 }
