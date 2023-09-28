@@ -15,6 +15,6 @@ class MainActivity : AppCompatActivity() {
         myWebView.addJavascriptInterface(WebAppInterface(this), "Android")
         myWebView.settings.javaScriptEnabled = true
         myWebView.webViewClient = WebViewClient()  // default WebViewClient
-            myWebView.loadUrl("https://mail.google.com/") // Website URL
+        myWebView.loadUrl("https://mail.google.com/") // Website URL
     }
 }
