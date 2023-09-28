@@ -3,6 +3,7 @@ package com.alron.webview
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebView
+import android.webkit.WebViewClient
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,5 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         myWebView.addJavascriptInterface(WebAppInterface(this), "Android")
         myWebView.settings.javaScriptEnabled = true
+        myWebView.webViewClient = WebViewClient()  // default WebViewClient
+        myWebView.loadUrl("https://berezka-sad.caduk.ru/") // Website URL
     }
 }
